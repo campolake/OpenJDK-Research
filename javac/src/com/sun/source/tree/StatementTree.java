@@ -28,7 +28,7 @@ package com.sun.source.tree;
 /**
  * A tree node used as the base class for the different kinds of
  * statements.
- *
+ *语句：每种语言的语句就那么几种：for, while , if else, do..while , switch。
  * @jls chapter 14
  *
  * @author Peter von der Ah&eacute;

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerEnvironment>JAVA_HOME=C:\Program Files\Java\jre1.8.0_25</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArguments>-XXaltjvm=$(TargetDir) -Dsun.java.launcher=gamma -agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=y -cp E:\mytest my.Test </LocalDebuggerCommandArguments>
+  </PropertyGroup>
+</Project>

@@ -321,7 +321,8 @@ class MetaspaceObj {
   void operator delete(void* p) { ShouldNotCallThis(); }
 };
 
-// Base class for classes that constitute name spaces.
+// Base class for classes that constitute name spaces.,
+//禁用构造和析构，防止类被new调用
 
 class AllStatic {
  public:

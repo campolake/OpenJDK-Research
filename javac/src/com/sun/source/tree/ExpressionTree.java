@@ -28,7 +28,7 @@ package com.sun.source.tree;
 /**
  * A tree node used as the base class for the different types of
  * expressions.
- *
+ *expression  : 表达式 就是加减乘除等各种运算符号联接起来 的式子
  * @jls chapter 15
  *
  * @author Peter von der Ah&eacute;

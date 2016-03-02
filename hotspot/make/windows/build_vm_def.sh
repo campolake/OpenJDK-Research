@@ -21,7 +21,6 @@
 # questions.
 #  
 #
-
 # This shell script builds a vm.def file for the current VM variant.
 # The .def file exports vtbl symbols which allow the Serviceability
 # Agent to run on Windows. See make/windows/projectfiles/*/vm.def
@@ -29,7 +28,6 @@
 #
 # The script expects to be executed in the directory containing all of
 # the object files.
-
 # Note that we currently do not have a way to set HotSpotMksHome in
 # the batch build, but so far this has not seemed to be a problem. The
 # reason this environment variable is necessary is that it seems that
