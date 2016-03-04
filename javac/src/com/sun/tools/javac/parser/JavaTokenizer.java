@@ -138,7 +138,7 @@ public class JavaTokenizer {
         errPos = pos;
     }
 
-    /** Read next character in character or string literal and copy into sbuf.
+    /** Read next character in character or string literal and copy into sbuf.扫描字面量
      */
     private void scanLitChar(int pos) {
         if (reader.ch == '\\') {
@@ -343,7 +343,7 @@ public class JavaTokenizer {
         }
     }
 
-    /** Read an identifier.
+    /** Read an identifier. 读取标识符
      */
     private void scanIdent() {
         boolean isJavaIdentifierPart;

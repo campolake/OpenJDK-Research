@@ -63,7 +63,7 @@ import static com.sun.tools.javac.jvm.ClassFile.Version.*;
 import static com.sun.tools.javac.main.Option.*;
 
 /** This class provides operations to read a classfile into an internal
- *  representation. The internal representation is anchored in a
+ *  representation. The internal representation is anchored(¹Ì¶¨) in a
  *  ClassSymbol which contains in its scope symbol representations
  *  for all other definitions in the classfile. Top-level Classes themselves
  *  appear as members of the scopes of PackageSymbols.
