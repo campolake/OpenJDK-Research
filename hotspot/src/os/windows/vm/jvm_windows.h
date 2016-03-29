@@ -55,6 +55,7 @@ typedef struct _MODULEINFO {
 
 #else
 #include <Psapi.h>
+#pragma comment(lib, "Psapi.lib") 
 #endif
 
 #include <Tlhelp32.h>

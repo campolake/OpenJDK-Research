@@ -51,9 +51,9 @@ import static com.sun.tools.javac.tree.JCTree.Tag.*;
 
 /** The parser maps a token sequence into an abstract syntax
  *  tree. It operates by recursive descent, with code derived
- *  systematically from an LL(1) grammar. For efficiency reasons, an
- *  operator precedence scheme is used for parsing binary operation
- *  expressions.
+ *  systematically（有系统有组织） from an LL(1) grammar. For efficiency reasons, an
+ *  operator precedence cheme is used for parsing binary operation
+ *  expressions.（出于效率原因，运算采用基于优先级的模型）
  *
  *  <p><b>This is NOT part of any supported API.
  *  If you write code that depends on this, you do so at your own risk.
@@ -1065,7 +1065,7 @@ public class JavacParser implements Parser {
         JCExpression t;
         List<JCExpression> typeArgs = typeArgumentsOpt(EXPR);
         switch (token.kind) {
-        case QUES:
+        case QUES://?
             if ((mode & TYPE) != 0 && (mode & (TYPEARG|NOPARAMS)) == TYPEARG) {
                 mode = TYPE;
                 return typeArgument();
@@ -2384,6 +2384,7 @@ public class JavacParser implements Parser {
             /* fall through to default */
         default:
             Token prevToken = token;
+            //int a =90; 识别到int a ;
             JCExpression t = term(EXPR | TYPE);
             if (token.kind == COLON && t.hasTag(IDENT)) {
                 nextToken();
@@ -3420,7 +3421,7 @@ public class JavacParser implements Parser {
             Comment dc = token.comment(CommentStyle.JAVADOC);
             int pos = token.pos;
             JCModifiers mods = modifiersOpt();
-            if (token.kind == CLASS ||
+            if (token.kind == CLASS || //嵌套定义
                 token.kind == INTERFACE ||
                 allowEnums && token.kind == ENUM) {
                 return List.<JCTree>of(classOrInterfaceOrEnumDeclaration(mods, dc));
@@ -3837,7 +3838,7 @@ public class JavacParser implements Parser {
         return (pos1 < pos2 ? pos1 : pos2);
     }
 
-    /** Return operation tag of binary operator represented by token,
+    /** Return operation tag of binary operator represented by token,TokenKind和Tag的相互转化
      *  No_TAG if token is not a binary operator.
      */
     static JCTree.Tag optag(TokenKind token) {

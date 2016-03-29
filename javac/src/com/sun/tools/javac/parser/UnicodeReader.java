@@ -40,7 +40,7 @@ import static com.sun.tools.javac.util.LayoutCharacters.*;
  * characters contained in the input stream, handling unicode escape accordingly.
  * Additionally, it provides features for saving chars into a buffer and to retrieve
  * them at a later stage.
- *
+ * 传入的是文件的char的数组
  *  <p><b>This is NOT part of any supported API.
  *  If you write code that depends on this, you do so at your own risk.
  *  This code and its internal interfaces are subject to change or
@@ -55,7 +55,7 @@ public class UnicodeReader {
     protected int bp;
     protected final int buflen;
 
-    /** The current character.
+    /** The current character. 当前的字符
      */
     protected char ch;
 
@@ -66,7 +66,7 @@ public class UnicodeReader {
     protected Log log;
     protected Names names;
 
-    /** A character buffer for saved chars.
+    /** A character buffer for saved chars. 缓存的token的部分信息
      */
     protected char[] sbuf = new char[128];
     protected int sp;
@@ -218,7 +218,7 @@ public class UnicodeReader {
     }
 
     /** Convert an ASCII digit from its base (8, 10, or 16)
-     *  to its value.
+     *  to its value. 不同进制的数的判断
      */
     protected int digit(int pos, int base) {
         char c = ch;
@@ -233,11 +233,17 @@ public class UnicodeReader {
     protected boolean isUnicode() {
         return unicodeConversionBp == bp;
     }
-
+    /**
+     * 跳过一个字符
+     */
     protected void skipChar() {
         bp++;
     }
 
+    /**
+     * 换回当前的字符
+     * @return
+     */
     protected char peekChar() {
         return buf[bp + 1];
     }

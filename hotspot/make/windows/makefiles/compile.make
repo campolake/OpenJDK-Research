@@ -275,9 +275,9 @@ LD_FLAGS= $(LD_FLAGS) /map /debug
 !endif
 
 
-!if $(MSC_VER) >= 1600 
+
 LD_FLAGS= $(LD_FLAGS) psapi.lib
-!endif
+
 
 # Resource compiler settings
 !if "x$(RC)" == "x"

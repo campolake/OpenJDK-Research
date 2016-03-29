@@ -48,7 +48,7 @@
 //  2: provide vm dispatch behavior for the object
 // Both functions are combined into one C++ class.
 
-// One reason for the oop/klass dichotomy in the implementation is
+// One reason for the oop/klass dichotomy(二分法) in the implementation is
 // that we don't want a C++ vtbl pointer in every object.  Thus,
 // normal oops don't have any virtual functions.  Instead, they
 // forward all "virtual" functions to their klass, which does have

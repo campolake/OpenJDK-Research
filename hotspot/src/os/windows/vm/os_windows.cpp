@@ -196,7 +196,7 @@ void os::init_system_properties_values() {
                   *pslash = '\0';             /* get rid of \bin */
           }
       }
-
+	  strcpy(home_dir, "C:\\Java\\jdk1.7.0_79_x86\\jre");
       home_path = NEW_C_HEAP_ARRAY(char, strlen(home_dir) + 1, mtInternal);
       if (home_path == NULL)
           return;

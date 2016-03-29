@@ -153,7 +153,7 @@ public abstract class JCTree implements Tree, Cloneable, DiagnosticPosition {
          */
         CATCH,
 
-        /** Conditional expressions, of type Conditional.
+        /** Conditional expressions, of type Conditional.条件表达式
          */
         CONDEXPR,
 
@@ -289,7 +289,7 @@ public abstract class JCTree implements Tree, Cloneable, DiagnosticPosition {
          */
         ERRONEOUS,
 
-        /** Unary operators, of type Unary.
+        /** Unary operators, of type Unary. 一元表达式
          */
         POS,                             // +
         NEG,                             // -
@@ -304,7 +304,7 @@ public abstract class JCTree implements Tree, Cloneable, DiagnosticPosition {
          */
         NULLCHK,
 
-        /** Binary operators, of type Binary.
+        /** Binary operators, of type Binary. 二元表达式
          */
         OR,                              // ||
         AND,                             // &&
@@ -326,7 +326,7 @@ public abstract class JCTree implements Tree, Cloneable, DiagnosticPosition {
         DIV,                             // /
         MOD,                             // %
 
-        /** Assignment operators, of type Assignop.
+        /** Assignment operators, of type Assignop. 赋值表达式
          */
         BITOR_ASG(BITOR),                // |=
         BITXOR_ASG(BITXOR),              // ^=
@@ -2071,7 +2071,7 @@ public abstract class JCTree implements Tree, Cloneable, DiagnosticPosition {
     }
 
     /**
-     * Identifies a basic type.
+     * Identifies a basic type.标志一个基本类型
      * @see TypeTag
      */
     public static class JCPrimitiveTypeTree extends JCExpression implements PrimitiveTypeTree {

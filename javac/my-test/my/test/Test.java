@@ -9,7 +9,11 @@ public class Test {
     	int a =90;
     	int b =90;
     	int c = 78;
-    	int d = a + b +c;
+//		int f = 3;
+//		int g  = 2;
+//		int x = 1;
+//		int z = 90;
+    	int d = a + b * c ;
     	System.out.println(d);
     }
 
